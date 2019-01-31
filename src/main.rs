@@ -1,5 +1,5 @@
 fn main() {
-    // if this call is uncommented, the example works:
+    // if this call is uncommented, the example works, but prints an extra message:
 
     // library::module_callback();
 
