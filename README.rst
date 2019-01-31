@@ -16,15 +16,19 @@ following messages::
   Hello from the callback!
 
 However, the example as checked in does not do that. In ``src/main.rs``, there are two commented-out
-bits of code, each of which will cause the example to at least run if uncommented. The first calls
+bits of code, each of which will cause the example to at least run if uncommented. One calls
 ``library::module_callback()`` directly, which prints an extra message::
 
   Hello from the callback!
   Hello from the module!
   Hello from the callback!
 
-The second is a copy-paste of the definition of ``library::module_callback()``, but in the
+Another is a copy-paste of the definition of ``library::module_callback()``, but in the
 executable's crate. It makes the output work as expected.
 
-Note however that none of these variants work without the ``--export-dynamic`` linker flag as set in
+Finally if we call ``std::ptr::read_volatile(module_callback as *const extern "C" fn ())`` either in
+the executable or in ``library::load_and_run()``, the example works. This is a relatively low-impact
+way of preventing the dead code elimination, but it would be nice to not have to do this at all!
+
+Note also that none of these variants work without the ``--export-dynamic`` linker flag as set in
 ``.cargo/config``.
