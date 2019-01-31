@@ -1,0 +1,10 @@
+[package]
+name = "module"
+version = "0.1.0"
+authors = ["Adam C. Foltzer <acfoltzer@acfoltzer.net>"]
+edition = "2018"
+
+[dependencies]
+
+[lib]
+crate-type = ["cdylib"]

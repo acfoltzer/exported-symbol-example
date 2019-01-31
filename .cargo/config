@@ -1,0 +1,3 @@
+[build]
+# if this option isn't set, none of the variants in `main.rs` will work
+rustflags = ["-C", "link-args=-Wl,--export-dynamic"]

@@ -1,0 +1,11 @@
+[package]
+name = "exported-symbol-example"
+version = "0.1.0"
+authors = ["Adam C. Foltzer <acfoltzer@acfoltzer.net>"]
+edition = "2018"
+
+[dependencies]
+library = { path = "library" }
+
+[workspace]
+members = ["library", "module"]
