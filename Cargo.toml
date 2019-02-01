@@ -4,8 +4,11 @@ version = "0.1.0"
 authors = ["Adam C. Foltzer <acfoltzer@acfoltzer.net>"]
 edition = "2018"
 
-[dependencies]
-library = { path = "library" }
+[dev-dependencies]
+lib1 = { path = "lib1" }
+lib2 = { path = "lib2" }
+lib3 = { path = "lib3" }
+lib4 = { path = "lib4" }
 
 [workspace]
-members = ["library", "module"]
+members = ["lib1", "lib2", "lib3", "lib4", "module"]

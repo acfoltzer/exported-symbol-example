@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 cargo build --all
-cargo run
+cargo test -- --nocapture

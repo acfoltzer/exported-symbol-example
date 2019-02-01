@@ -7,6 +7,7 @@ pub extern "C" fn module_callback() {
 
 pub trait T {
     fn ensure_linked(&self) {
+        // only difference from lib3 is that this line is uncommented:
         println!("{:?}", S {});
     }
 
