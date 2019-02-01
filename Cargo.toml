@@ -9,6 +9,7 @@ lib1 = { path = "lib1" }
 lib2 = { path = "lib2" }
 lib3 = { path = "lib3" }
 lib4 = { path = "lib4" }
+lib5 = { path = "lib5" }
 
 [workspace]
-members = ["lib1", "lib2", "lib3", "lib4", "module"]
+members = ["lib1", "lib2", "lib3", "lib4", "lib5", "module"]

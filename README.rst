@@ -38,5 +38,8 @@ However, not all of the examples do that:
 4. This variation differs only from 3 by removing the printing of ``S`` from the uncalled
    ``ensure_linked`` method. This is somehow enough to prevent the example from working!
 
+5. This variation is similar to 2, but exports a ``static`` with the ``#[used]`` attribute rather
+   than trying to export ``module_callback`` directly. It also doesn't work.
+
 Note also that none of these variants work without the ``--export-dynamic`` linker flag as set in
 ``.cargo/config``.
